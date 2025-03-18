@@ -5,7 +5,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
 import SummaryApi from "../common";
 import {toast} from "react-toastify";
-// import Context from '../context';
+import Context from '../context';
 
 const Login = () => {
 
@@ -16,7 +16,7 @@ const Login = () => {
     })
 
     const navigate = useNavigate()
-    // const { fetchUserDetails, fetchUserAddToCart } = useContext(Context)
+    const { fetchUserDetails, fetchUserAddToCart } = useContext(Context)
     
     const handleOnChange = (e) =>{
         const { name , value } = e.target
@@ -47,7 +47,7 @@ const Login = () => {
         if(dataApi.success){
             toast.success(dataApi.message)
             navigate('/')
-            // fetchUserDetails()
+            fetchUserDetails()
             // fetchUserAddToCart()
         }
 
