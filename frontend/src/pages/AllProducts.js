@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from 'react'
 // import SummaryApi from '../common'
 // import UploadProduct from "../components/UploadProduct";
-// import AdminProductCard from "../components/AdminProductCard";
+// // import AdminProductCard from "../components/AdminProductCard";
 
 
 // const AllProducts = () => {

@@ -6,14 +6,14 @@ import Footer from './components/Footer';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from 'react';
-import SummaryApi from './common/index';
 import Context from './context';
 import { useDispatch } from 'react-redux';
 import { setUserDetails } from './store/userSlice';
+import SummaryApi from './common';
 
 function App() {
     const dispatch = useDispatch()
-    const [cartProductCount,setCartProductCount] = useState(0)
+    // const [cartProductCount,setCartProductCount] = useState(0)
 
     const fetchUserDetails = async()=>{
         const dataResponse = await fetch(SummaryApi.current_user.url,{
