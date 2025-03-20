@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs')
-const userModel = require("../model/UserModel");
+const userModel = require("../../model/UserModel");
 const jwt = require('jsonwebtoken');
 
 async function userSignInController(req,res){

@@ -6,7 +6,7 @@ import ForgotPassowrd from '../pages/ForgotPassowrd'
 import SignUp from '../pages/SignUp'
 import AdminPanel from '../pages/AdminPanel'
 import AllUsers from '../pages/AllUsers'
-// import AllProducts from '../pages/AllProducts'
+import AllProducts from '../pages/AllProducts'
 
 
 const router = createBrowserRouter([
@@ -38,10 +38,10 @@ const router = createBrowserRouter([
                         path : "all-users",
                         element : <AllUsers/>
                     },
-                    // {
-                    //     path : "all-products",
-                    //     element : <AllProducts/>
-                    // }
+                    {
+                        path : "all-products",
+                        element : <AllProducts/>
+                    }
                 ]
             },
         ]
