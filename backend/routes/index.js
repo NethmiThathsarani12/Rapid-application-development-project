@@ -11,6 +11,9 @@ const userLogout = require("../controller/user/userLogout");
 const authToken = require("../middleware/authToken");
 const getCategoryProduct = require('../controller/product/getCategoryProduct')
 const getCategoryWiseProduct = require('../controller/product/getCategoryWiseProduct')
+const getProductDetails = require('../controller/product/getProductDetails')
+const addToCartController = require('../controller/user/addToCartController')
+const countAddToCartProduct = require('../controller/user/countAddToCartProduct')
 const router = express.Router()
 
 
@@ -27,10 +30,12 @@ router.get("/all-user",authToken,allUsers)
 router.get("/get-product",getProductController)
 router.post("/upload-product",authToken,UploadProductController)
 router.post("/update-product",authToken,updateProductController)
-
 router.get("/get-categoryProduct",getCategoryProduct)
 router.post("/category-product",getCategoryWiseProduct)
+router.post("/product-details",getProductDetails)
 
+router.post("/addtocart",authToken,addToCartController)
+router.get("/countAddToCartProduct",authToken,countAddToCartProduct)
 
 
 module.exports = router
