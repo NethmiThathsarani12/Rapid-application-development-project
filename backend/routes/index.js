@@ -10,6 +10,7 @@ const updateProductController = require('../controller/product/updateProduct')
 const userLogout = require("../controller/user/userLogout");
 const authToken = require("../middleware/authToken");
 const getCategoryProduct = require('../controller/product/getCategoryProduct')
+const getCategoryWiseProduct = require('../controller/product/getCategoryWiseProduct')
 const router = express.Router()
 
 
@@ -28,6 +29,7 @@ router.post("/upload-product",authToken,UploadProductController)
 router.post("/update-product",authToken,updateProductController)
 
 router.get("/get-categoryProduct",getCategoryProduct)
+router.post("/category-product",getCategoryWiseProduct)
 
 
 
