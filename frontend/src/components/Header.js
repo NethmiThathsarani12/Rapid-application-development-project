@@ -19,6 +19,9 @@ const Header = () => {
     const context = useContext(Context)
     const searchInput = useLocation()
     const navigate = useNavigate()
+    const URLSearch = new URLSearchParams(searchInput?.search)
+    const searchQuery = URLSearch.getAll("q")
+    const [search,setSearch] = useState(searchQuery)
    
 
     const handleLogout = async() => {
